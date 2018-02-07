@@ -3,8 +3,11 @@
 		<title>Quora Clone</title>
 	</head>
 	<body>
-		<h1>Quora Clone</h1>
-		<form action='/questions/<%=@question.id%>' method='post'>
+		<h1>Update Question</h1>
+		<h2><%= @question.user_name %></h2> 
+		<h2><%= @question.question_body %></h2>
+		<h3>Your answer</h3>
+		<form action='/questions/<%=@question.id%>/edit' method='post'>
 			<input type='text' name='user_name'>
 			<input type='text' name='question_body'>
 			<input type='submit' name='sub'>
